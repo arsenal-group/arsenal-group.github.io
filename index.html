@@ -5,127 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Арсенал Групп — Строительная компания</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Шапка */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 5%;
-            background-color: #fff;
-            border-bottom: 1px solid #e0e0e0;
+            padding: 20px 5%;
+            background: #fff;
+            border-bottom: 1px solid #eee;
         }
 
-        /* Контейнер брендинга: логотип над текстом */
-        .brand-block {
+        /* Общий контейнер: лого над текстом */
+        .brand-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-decoration: none;
         }
 
+        /* Сама картинка */
         .logo-img {
-            height: 50px; /* Отрегулируйте высоту под ваш логотип */
+            height: 70px;
             width: auto;
-            margin-bottom: 5px;
-            display: block;
+            margin-bottom: 8px; /* Отступ от картинки до текста */
         }
 
-        /* Текст в одну строку */
+        /* Контейнер для текста: СЛОВА В СТРОКУ */
         .brand-text-row {
-            display: flex;
+            display: flex; 
+            flex-direction: row; /* В строчку */
             align-items: baseline;
-            gap: 10px; /* Расстояние между словами */
-            white-space: nowrap;
+            gap: 10px;
         }
 
-        .name-main {
+        .brand-name {
             font-family: 'Arial Black', sans-serif;
             font-weight: 900;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: #2C4A86;
+            line-height: 1;
         }
 
-        .name-sub {
-            font-size: 1rem;
+        .brand-subname {
+            font-size: 0.9rem;
             color: #B1B3B6;
+            letter-spacing: 4px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Навигация */
-        nav {
-            display: flex;
-            gap: 30px;
+            line-height: 1;
         }
 
         nav a {
+            margin-left: 20px;
             text-decoration: none;
-            color: #2C4A86;
-            font-size: 0.9rem;
+            color: #333;
             font-weight: 500;
-        }
-
-        /* Секции */
-        .section {
-            padding: 50px 10%;
-            text-align: center;
-        }
-
-        h1 {
-            color: #2C4A86;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-        }
-
-        .content-text {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <!-- Блок логотипа -->
-    <div class="brand-block">
-        <!-- ВАЖНО: Проверьте название файла. Если это просто PNG, уберите .jpg -->
-        <img src="логотип.jpg.png" alt="Логотип" class="logo-img">
+    <a href="#" class="brand-container">
+        <!-- Исправленное имя файла (как у вас на GitHub) -->
+        <img src="логотип.png" alt="Логотип" class="logo-img">
         
+        <!-- Текст теперь в строчку -->
         <div class="brand-text-row">
-            <span class="name-main">АРСЕНАЛ</span>
-            <span class="name-sub">ГРУПП</span>
+            <span class="brand-name">АРСЕНАЛ</span>
+            <span class="brand-subname">ГРУПП</span>
         </div>
-    </div>
+    </a>
 
     <nav>
         <a href="#portfolio">Наши работы</a>
         <a href="#contacts">Контакты</a>
     </nav>
 </header>
-
-<section id="about" class="section">
-    <h1>О компании</h1>
-    <div class="content-text">
-        <p>Строительная компания <strong>«Арсенал Групп»</strong> объединяет современные инженерные решения и проверенные временем технологии.</p>
-        <p>Мы специализируемся на полном цикле работ: от изысканий до сдачи готового объекта.</p>
-    </div>
-</section>
 
 </body>
 </html>
