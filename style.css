@@ -1,6 +1,6 @@
-body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; color: #333; line-height: 1.6; }
+body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; color: #333; line-height: 1.6; scroll-behavior: smooth; }
 
-/* ФИКС ЛОГОТИПА */
+/* ШАПКА И ЛОГОТИП */
 .main-header { 
     display: flex; 
     justify-content: space-between; 
@@ -13,9 +13,9 @@ body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; color:
     z-index: 1000;
 }
 .site-logo { 
-    height: 100px; /* Уменьшил до 100px для аккуратности */
+    height: 100px; 
     width: auto; 
-    max-width: 250px; /* Ограничение по ширине, чтобы не "взрывался" */
+    max-width: 250px; 
     display: block; 
 }
 
@@ -23,23 +23,36 @@ body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; color:
 .main-nav a { text-decoration: none; color: #333; font-weight: bold; font-size: 16px; text-transform: uppercase; }
 .main-nav a:hover { color: #2C4A86; }
 
+/* СЕКЦИИ */
 section { padding: 60px 10%; max-width: 1200px; margin: 0 auto; }
-h1, h2 { color: #2C4A86; border-bottom: 2px solid #2C4A86; display: inline-block; padding-bottom: 5px; }
+h1, h2 { color: #2C4A86; border-bottom: 2px solid #2C4A86; display: inline-block; padding-bottom: 5px; text-transform: uppercase; }
 
 .principles-block { margin: 30px 0; background: #fdfdfd; padding: 25px; border-left: 5px solid #2C4A86; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
 .principles-block ul { list-style: none; padding: 0; }
 .principles-block li { margin-bottom: 12px; display: flex; align-items: center; font-size: 17px; }
 .principles-block span { color: #2C4A86; margin-right: 12px; font-weight: bold; }
 
-.map-container { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
-.object-item { margin-top: 20px; background: #fff; padding: 20px; border: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; }
-.btn-photo { background: #2C4A86; color: #fff; border: none; padding: 12px 25px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+/* КАРТА И ОБЪЕКТЫ */
+.map-container { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; margin-top: 20px; }
+.object-item { 
+    margin-top: 30px; 
+    background: #fff; 
+    padding: 25px; 
+    border: 1px solid #eee; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+}
+.btn-photo { background: #2C4A86; color: #fff; border: none; padding: 15px 30px; border-radius: 4px; cursor: pointer; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
+.btn-photo:hover { background: #1a252f; }
 
 /* ГАЛЕРЕЯ */
 .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); overflow-y: auto; }
 .modal-content { background: #fff; margin: 2% auto; padding: 30px; width: 90%; max-width: 1100px; border-radius: 8px; position: relative; }
 .close-btn { position: absolute; right: 20px; top: 10px; color: #333; font-size: 40px; cursor: pointer; }
-.photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
-.photo-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+.photo-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; border: 1px solid #eee; }
 
 footer { text-align: center; padding: 30px; background: #fff; color: #888; border-top: 1px solid #eee; }
