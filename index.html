@@ -6,25 +6,23 @@
     <title>АРСЕНАЛ ГРУПП — Строительная компания</title>
     <style>
         html { scroll-behavior: smooth; } /* Плавная прокрутка */
-        body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; color: #333; }
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
         header { display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 1000; }
-        .logo-img { height: 100px; width: auto; display: block; }
-        nav a { margin-left: 25px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 14px; }
+        .logo-img { height: 100px; width: auto; }
+        nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; text-transform: uppercase; font-size: 14px; }
+        section { padding: 60px 10%; }
+        .map-box { margin-top: 30px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
         
-        section { padding: 60px 10%; max-width: 1200px; margin: 0 auto; }
-        h1, h2 { color: #2C4A86; border-bottom: 2px solid #2C4A86; display: inline-block; padding-bottom: 5px; text-transform: uppercase; }
-        
-        .map-wrapper { margin-top: 30px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        /* КАРТОЧКА ОБЪЕКТА */
         .object-card { margin-top: 40px; background: #fff; padding: 30px; border: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .btn-gallery { background: #2C4A86; color: #fff; border: none; padding: 18px 35px; border-radius: 4px; cursor: pointer; font-weight: bold; text-transform: uppercase; }
 
+        /* МОДАЛЬНОЕ ОКНО */
         .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); overflow-y: auto; }
         .modal-content { background: #fff; margin: 2% auto; padding: 30px; width: 90%; max-width: 1100px; border-radius: 8px; position: relative; }
         .close-btn { position: absolute; right: 20px; top: 10px; font-size: 45px; font-weight: bold; cursor: pointer; }
         .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-top: 20px; }
         .photo-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
-
-        footer { text-align: center; padding: 40px; border-top: 1px solid #eee; color: #888; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -38,18 +36,14 @@
     </nav>
 </header>
 
-<section id="about">
-    <h1>О компании</h1>
-    <p style="font-size: 18px; line-height: 1.8;"><strong>«Арсенал Групп»</strong> — профессиональная строительная организация, ориентированная на результат. Мы берем на себя ответственность за техническую сторону вопроса.</p>
-</section>
-
 <section id="portfolio" style="background: #f9f9f9;">
-    <h2>Наши объекты</h2>
-    <div class="map-wrapper">
+    <h2>Объекты на карте</h2>
+    <div class="map-box">
+        <!-- ВСТАВЬТЕ НОВЫЙ IFRAME ИЗ ЯНДЕКСА НИЖЕ -->
         <iframe src="https://yandex.ru" width="100%" height="530" frameborder="0"></iframe>
     </div>
 
-    <!-- ЭТОТ ID ДОЛЖЕН БЫТЬ ТУТ ДЛЯ СВЯЗИ С КАРТОЙ -->
+    <!-- ТОТ САМЫЙ ЯКОРЬ ДЛЯ КНОПКИ С КАРТЫ -->
     <div id="details" class="object-card">
         <div>
             <strong style="font-size: 22px; color: #2C4A86;">Щелковское шоссе, д. 91, к. 2</strong>
@@ -59,6 +53,7 @@
     </div>
 </section>
 
+<!-- Остальной код галереи и контактов -->
 <div id="photoModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -73,17 +68,10 @@
     </div>
 </div>
 
-<section id="contacts">
-    <h2>Контакты</h2>
-    <p>📞 <a href="tel:+70000000000" style="color: #2C4A86; font-weight: bold; text-decoration: none;">+7 (000) 000-00-00</a></p>
-    <p>✉️ <a href="mailto:info@arsenal-group.ru" style="color: #2C4A86; font-weight: bold; text-decoration: none;">info@arsenal-group.ru</a></p>
-</section>
-
 <script>
     function openModal() { document.getElementById("photoModal").style.display = "block"; document.body.style.overflow = "hidden"; }
-    function closeModal() { document.getElementById("galleryModal").style.display = "none"; document.body.style.overflow = "auto"; }
-    // Исправлено: закрытие по клику на фон
-    window.onclick = function(event) { if (event.target.className === 'modal') { document.getElementById("photoModal").style.display = "none"; document.body.style.overflow = "auto"; } }
+    function closeModal() { document.getElementById("photoModal").style.display = "none"; document.body.style.overflow = "auto"; }
+    window.onclick = function(event) { if (event.target.className === 'modal') closeModal(); }
 </script>
 
 </body>
