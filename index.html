@@ -4,71 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Арсенал Групп — Строительная компания</title>
-    <!-- Подключаем файл со стилями -->
-    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif;">
 
-<header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; border-bottom: 1px solid #eee;">
-    <div class="brand-container" style="display: flex; flex-direction: column; align-items: center; padding: 10px 0;">
-        <!-- Логотип сверху -->
-        <img src="логотип.png" alt="Логотип Арсенал Групп" style="height: 70px; width: auto; display: block; margin-bottom: 5px;">
-        
-        <!-- Название снизу в одну строку, первая буква заглавная -->
-        <div style="font-family: Arial, sans-serif; line-height: 1.1; text-align: center; display: flex; flex-direction: row; align-items: center; gap: 8px;">
-            <span style="font-weight: bold; font-size: 1.6rem; color: #2C4A86;">Арсенал</span>
-            <span style="font-weight: normal; font-size: 1.6rem; color: #777;">Групп</span>
-        </div>
-    </div>
+<header style="display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; border-bottom: 1px solid #eee; background: #fff;">
     
-    <nav style="display: flex; gap: 20px;">
-        <a href="#portfolio" style="text-decoration: none; color: #333; font-weight: bold;">Наши работы</a>
-        <a href="#contacts" style="text-decoration: none; color: #333; font-weight: bold;">Контакты</a>
+    <!-- Контейнер бренда: Логотип НАД текстом -->
+    <div style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+        
+        <!-- 1. Картинка (Проверьте, чтобы имя файла на GitHub было логотип.png) -->
+        <img src="логотип.png" alt="Логотип" style="height: 65px; width: auto; display: block; margin-bottom: 8px;">
+        
+        <!-- 2. Название в одну строку (Арсенал Групп) -->
+        <div style="display: flex; flex-direction: row; align-items: center; gap: 10px; white-space: nowrap;">
+            <span style="font-weight: bold; font-size: 22px; color: #2C4A86;">Арсенал</span>
+            <span style="font-weight: normal; font-size: 22px; color: #555;">Групп</span>
+        </div>
+        
+    </div>
+
+    <!-- Навигация -->
+    <nav style="display: flex; gap: 30px;">
+        <a href="#portfolio" style="text-decoration: none; color: #333; font-weight: bold; font-size: 14px;">Наши работы</a>
+        <a href="#contacts" style="text-decoration: none; color: #333; font-weight: bold; font-size: 14px;">Контакты</a>
     </nav>
 </header>
 
-<section id="about" class="section" style="padding: 40px 10%;">
-    <h1>О компании</h1>
-    <p>Строительная компания <strong>«Арсенал Групп»</strong> объединяет современные инженерные решения и проверенные временем строительные технологии. Мы специализируемся на полном цикле работ: от первичных изысканий до сдачи готового объекта, обеспечивая строгий контроль качества на каждом этапе.</p>
+<section id="about" style="padding: 60px 10%;">
+    <h1 style="color: #2C4A86; font-size: 28px;">О КОМПАНИИ</h1>
+    <p style="line-height: 1.6; color: #333; max-width: 900px;">
+        Строительная компания <strong>«Арсенал Групп»</strong> объединяет современные инженерные решения и проверенные временем строительные технологии. Мы специализируемся на полном цикле работ: от первичных изысканий до сдачи готового объекта.
+    </p>
     
-    <div class="principles">
-        <h3>Наши ключевые принципы:</h3>
-        <ul class="services-list">
-            <li><strong>Надежность:</strong> Строгое соблюдение СНиП, ГОСТ и договорных сроков.</li>
-            <li><strong>Технологичность:</strong> Использование сертифицированных материалов и современного оборудования.</li>
-            <li><strong>Прозрачность:</strong> Мы предоставляем полную информацию о ходе работ и техническую поддержку на всех стадиях проекта.</li>
+    <div style="margin-top: 30px;">
+        <h3 style="color: #2C4A86;">Наши ключевые принципы:</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 15px;"><strong>Надежность:</strong> Соблюдение СНиП, ГОСТ и сроков.</li>
+            <li style="margin-bottom: 15px;"><strong>Технологичность:</strong> Современное оборудование и материалы.</li>
+            <li style="margin-bottom: 15px;"><strong>Прозрачность:</strong> Техническая поддержка на всех стадиях.</li>
         </ul>
     </div>
-    
-    <p>Мы постоянно совершенствуем производственные процессы, что позволяет нам оптимизировать сроки строительства без потери качества. «Арсенал Групп» — это надежный фундамент для ваших самых масштабных идей.</p>
 </section>
 
-<section id="portfolio" class="section dark-bg" style="padding: 40px 10%; background: #f9f9f9;">
-    <h2>Выполненные работы</h2>
-    <div class="portfolio-grid" style="display: flex; gap: 20px; margin-top: 20px;">
-        <div class="card" style="background: #fff; padding: 20px; border: 1px solid #ddd; flex: 1;">
+<section id="portfolio" style="padding: 60px 10%; background: #f9f9f9;">
+    <h2 style="color: #2C4A86;">ВЫПОЛНЕННЫЕ РАБОТЫ</h2>
+    <div style="display: flex; gap: 20px; margin-top: 20px;">
+        <div style="background: #fff; padding: 25px; border: 1px solid #eee; flex: 1;">
             <h3>Объект №1</h3>
-            <p class="address">📍 г. Москва, ул. Примерная, 10</p>
+            <p style="color: #888; font-size: 14px;">📍 г. Москва, ул. Примерная, 10</p>
             <p>Краткое описание выполненных работ на объекте.</p>
         </div>
-        <div class="card" style="background: #fff; padding: 20px; border: 1px solid #ddd; flex: 1;">
-            <h3>Объект №2</h3>
-            <p class="address">📍 Московская область, г. Видное</p>
-            <p>Полный цикл строительно-монтажных работ.</p>
-        </div>
     </div>
 </section>
 
-<section id="contacts" class="section" style="padding: 40px 10%;">
-    <h2>Контакты</h2>
-    <div class="contact-box">
-        <p><strong>Адрес офиса:</strong> Ваш фактический адрес</p>
-        <p><strong>Телефон:</strong> +7 (000) 000-00-00</p>
-        <p><strong>E-mail:</strong> info@arsenal-group.ru</p>
-    </div>
-</section>
-
-<footer style="text-align: center; padding: 20px; border-top: 1px solid #eee;">
+<footer style="text-align: center; padding: 30px; border-top: 1px solid #eee; color: #888; font-size: 14px;">
     <p>&copy; 2024 ООО «Арсенал Групп». Все права защищены.</p>
 </footer>
 
