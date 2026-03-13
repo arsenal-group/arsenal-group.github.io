@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>АРСЕНАЛ ГРУПП — Строительная компания</title>
-    <!-- Подключаем файл со стилями -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #fff;">
 
 <header style="display: flex; justify-content: space-between; align-items: center; padding: 5px 5%; border-bottom: 1px solid #eee; background: #fff;">
-   
-   <!-- Контейнер бренда -->
    <div class="brand-container" style="display: flex; align-items: center; text-decoration: none;">
-    <!-- Логотип: РАЗМЕР 130px -->
+    <!-- Логотип компании -->
     <img src="логотип.jpg.png" alt="АРСЕНАЛ ГРУПП" style="height: 130px; width: auto; display: block;">
    </div>
 
     <nav style="display: flex; gap: 30px;">
+        <a href="#about" style="text-decoration: none; color: #333; font-weight: bold; font-size: 18px;">О компании</a>
         <a href="#portfolio" style="text-decoration: none; color: #333; font-weight: bold; font-size: 18px;">Наши работы</a>
         <a href="#contacts" style="text-decoration: none; color: #333; font-weight: bold; font-size: 18px;">Контакты</a>
     </nav>
@@ -40,7 +38,7 @@
                 <span style="color: #2C4A86; margin-right: 10px;">✔</span>
                 <span><strong>Качество:</strong> используем только сертифицированные материалы и современное оборудование.</span>
             </li>
-            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+            <li style="margin-bottom: 0; display: flex; align-items: flex-start;">
                 <span style="color: #2C4A86; margin-right: 10px;">✔</span>
                 <span><strong>Надежность:</strong> строгое соблюдение СНиП, ГОСТ и договорных сроков.</span>
             </li>
@@ -53,22 +51,54 @@
 </section>
 
 <section id="portfolio" style="padding: 60px 10%; background: #f9f9f9;">
-    <h2 style="color: #2C4A86;">ВЫПОЛНЕННЫЕ РАБОТЫ</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px;">
-        <div style="background: #fff; padding: 30px; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-            <h3 style="margin-top: 0; color: #333;">Объект №1</h3>
-            <p style="color: #d32f2f; font-size: 14px; font-weight: bold; margin-bottom: 10px;">📍 г. Москва, ул. Примерная, 10</p>
-            <p style="color: #666; font-size: 15px; line-height: 1.5;">Краткое описание выполненных работ на объекте. Полный цикл строительно-монтажных работ.</p>
+    <h2 style="color: #2C4A86; border-bottom: 2px solid #2C4A86; display: inline-block; padding-bottom: 5px;">ВЫПОЛНЕННЫЕ РАБОТЫ</h2>
+    
+    <div style="margin-top: 30px; background: #fff; padding: 30px; border: 1px solid #eee; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <h3 style="margin-top: 0; color: #333; font-size: 22px;">Система: Фасад</h3>
+        <p style="color: #d32f2f; font-size: 16px; font-weight: bold; margin-bottom: 20px;">📍 г. Москва, Щелковское шоссе, д. 91, к. 2</p>
+        
+        <!-- Галерея из 25 фото -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
+            <img src="Фасад 1.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 2.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 3.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 4.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 5.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 6.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 7.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 8.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 9.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 10.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 11.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 12.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 13.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 14.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 15.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 16.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 17.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 18.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 19.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 20.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 21.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 22.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 23.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 24.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад 25.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
         </div>
+        
+        <p style="color: #666; font-size: 15px; line-height: 1.6; margin-top: 25px; border-top: 1px solid #eee; padding-top: 15px;">
+            Специалистами <strong>«Арсенал Групп»</strong> выполнен полный комплекс фасадных работ. В ходе реализации проекта были применены современные износостойкие материалы, обеспечивающие долговечность и эстетичный внешний вид здания. Работы завершены в строгом соответствии с технологическими картами и утвержденным графиком.
+        </p>
     </div>
 </section>
 
 <section id="contacts" style="padding: 60px 10%;">
-    <h2 style="color: #2C4A86;">КОНТАКТЫ</h2>
-    <div style="margin-top: 20px; line-height: 2;">
-        <p><strong>Адрес офиса:</strong> Ваш фактический адрес</p>
-        <p><strong>Телефон:</strong> <a href="tel:+70000000000" style="text-decoration: none; color: #2C4A86; font-weight: bold;">+7 (000) 000-00-00</a></p>
-        <p><strong>E-mail:</strong> <a href="mailto:info@arsenal-group.ru" style="text-decoration: none; color: #2C4A86; font-weight: bold;">info@arsenal-group.ru</a></p>
+    <h2 style="color: #2C4A86; border-bottom: 2px solid #2C4A86; display: inline-block; padding-bottom: 5px;">КОНТАКТЫ</h2>
+    <div style="margin-top: 30px; line-height: 2; font-size: 18px;">
+        <p><strong>ООО «АРСЕНАЛ ГРУПП»</strong></p>
+        <p>📍 <strong>Адрес:</strong> г. Москва, ул. Примерная, офис 101</p>
+        <p>📞 <strong>Телефон:</strong> <a href="tel:+70000000000" style="text-decoration: none; color: #2C4A86; font-weight: bold;">+7 (000) 000-00-00</a></p>
+        <p>✉️ <strong>Email:</strong> <a href="mailto:info@arsenal-group.ru" style="text-decoration: none; color: #2C4A86; font-weight: bold;">info@arsenal-group.ru</a></p>
     </div>
 </section>
 
