@@ -1,69 +1,112 @@
-/* Общие настройки */
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    line-height: 1.6;
-    color: #333;
-    scroll-behavior: smooth; /* Плавная прокрутка */
+/* Основные цвета на основе логотипа Арсенал Групп */
+:root {
+    --dark-blue: #2c4a86;    /* Насыщенный синий из центра логотипа */
+    --light-blue: #5d88c4;   /* Светло-синий из арки */
+    --steel-gray: #b1b3b6;   /* Серый (стальной) из боковых башен */
+    --bg-light: #f8f9fa;     /* Светло-серый фон как у матового стекла */
+    --text-dark: #333333;
 }
 
-/* Шапка и навигация */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    line-height: 1.7;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    scroll-behavior: smooth;
+}
+
+/* Шапка сайта */
 header {
-    background-color: #1a252f; /* Темно-синий, солидный */
-    color: white;
-    padding: 1rem 5%;
+    background: white; /* Белый фон для чистоты, как стена за вывеской */
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 3px solid var(--dark-blue); /* Синяя линия под шапкой */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.logo { font-weight: bold; font-size: 1.5rem; letter-spacing: 2px; }
-
-nav a {
-    color: #ecf0f1;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 0.9rem;
+.logo { 
+    font-weight: 800; 
+    font-size: 1.6rem; 
+    color: var(--dark-blue); 
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-nav a:hover { color: #3498db; }
+nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--light-blue);
+}
 
 /* Секции */
-.section { padding: 60px 10%; }
-.dark-bg { background-color: #f8f9fa; }
-
-h1, h2 { color: #2c3e50; margin-bottom: 20px; }
-
-/* Список услуг */
-.services-list { list-style: none; padding: 0; }
-.services-list li::before { content: "✔"; color: #3498db; margin-right: 10px; }
-
-/* Карточки работ */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+.section { 
+    padding: 80px 10%; 
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+h1, h2 { 
+    color: var(--dark-blue); 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Маленькая полоска под заголовком */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--light-blue);
+    margin-top: 10px;
+}
+
+/* Список принципов */
+.services-list { list-style: none; padding: 0; }
+.services-list li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-left: 5px solid var(--steel-gray);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.services-list li strong { color: var(--dark-blue); }
+
+/* Карточки объектов в стиле матового стекла */
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-top: 4px solid #1a252f;
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    transition: 0.3s;
 }
 
-.address { color: #7f8c8d; font-size: 0.9rem; font-style: italic; }
+.card:hover {
+    border-color: var(--light-blue);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
 
 /* Подвал */
 footer {
+    background: var(--dark-blue);
+    color: white;
     text-align: center;
-    padding: 30px;
-    background: #1a252f;
-    color: #95a5a6;
-    font-size: 0.8rem;
+    padding: 40px;
+    margin-top: 60px;
 }
