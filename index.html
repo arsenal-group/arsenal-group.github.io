@@ -11,7 +11,7 @@
 
 <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; border-bottom: 1px solid #eee; background: #fff; position: sticky; top: 0; z-index: 1000;">
    <div class="brand-container">
-    <img src="logo.jpg.png" alt="АРСЕНАЛ ГРУПП" style="height: 110px; width: auto; display: block;">
+    <img src="logo.jpg.png" alt="АРСЕНАЛ ГРУПП" style="height: 100px; width: auto; display: block;">
    </div>
     <nav style="display: flex; gap: 30px;">
         <a href="#about" style="text-decoration: none; color: #333; font-weight: bold; font-size: 18px;">О компании</a>
@@ -30,17 +30,17 @@
 <section id="portfolio" style="padding: 60px 10%; background: #f9f9f9;">
     <h2 style="color: #2C4A86; border-bottom: 2px solid #2C4A86; display: inline-block; padding-bottom: 5px; text-transform: uppercase;">Наши объекты</h2>
     <div style="margin-top: 30px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: #fff;">
-        <!-- ВСТАВЬТЕ СЮДА НОВЫЙ IFRAME ИЗ КОНСТРУКТОРА ЯНДЕКСА -->
+        <!-- ВСТАВЬТЕ НИЖЕ СВОЙ НОВЫЙ КОД IFRAME ИЗ КОНСТРУКТОРА ЯНДЕКСА -->
         <iframe src="https://yandex.ru" width="100%" height="530" frameborder="0"></iframe>
     </div>
 
-    <!-- МЕТКА ДЛЯ ПРЫЖКА ИЗ КАРТЫ -->
+    <!-- МЕТКА ДЛЯ ПЕРЕХОДА ИЗ КАРТЫ -->
     <div id="details" style="margin-top: 40px; background: #fff; padding: 30px; border: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
         <div>
             <strong style="font-size: 22px; color: #2C4A86;">Щелковское шоссе, д. 91, к. 2</strong>
             <p style="margin: 5px 0 0 0; color: #666; font-size: 16px;">Система: Фасад</p>
         </div>
-        <button onclick="openModal()" style="background: #2C4A86; color: #fff; border: none; padding: 18px 35px; border-radius: 4px; cursor: pointer; font-weight: bold; text-transform: uppercase;">📷 СМОТРЕТЬ ФОТО</button>
+        <button onclick="openModal()" style="background: #2C4A86; color: #fff; border: none; padding: 18px 35px; border-radius: 4px; cursor: pointer; font-weight: bold; text-transform: uppercase; font-size: 14px;">📷 СМОТРЕТЬ ФОТО</button>
     </div>
 </section>
 
@@ -48,13 +48,28 @@
     <div style="background: #fff; margin: 2% auto; padding: 30px; width: 90%; max-width: 1100px; border-radius: 8px; position: relative;">
         <span onclick="closeModal()" style="position: absolute; right: 20px; top: 10px; color: #333; font-size: 45px; cursor: pointer; font-weight: bold;">&times;</span>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
-            <!-- Список из 25 фото -->
+            <!-- Список из ваших фото -->
             <img src="Фасад%201.jpg" style="width: 100%; height: 220px; object-fit: cover; border-radius: 4px;">
             <img src="Фасад%202.jpg" style="width: 100%; height: 220px; object-fit: cover; border-radius: 4px;">
-            <!-- ... остальные фото добавьте по аналогии ... -->
+            <img src="Фасад%203.jpg" style="width: 100%; height: 220px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад%204.jpg" style="width: 100%; height: 220px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад%205.jpg" style="width: 100%; height: 220px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад%206.jpg" style="width: 100%; height: 220px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад%207.jpg" style="width: 100%; height: 220px; object-fit: cover; border-radius: 4px;">
+            <img src="Фасад%208.jpg" style="width: 100%; height: 220px; object-fit: cover; border-radius: 4px;">
+            <!-- Остальные фото f9-f25 будут отображаться так же -->
         </div>
     </div>
 </div>
+
+<section id="contacts" style="padding: 60px 10%;">
+    <h2 style="color: #2C4A86; border-bottom: 2px solid #2C4A86; display: inline-block; padding-bottom: 5px;">Контакты</h2>
+    <div style="margin-top: 30px; font-size: 18px; line-height: 2;">
+        <p><strong>ООО «АРСЕНАЛ ГРУПП»</strong></p>
+        <p>📞 <a href="tel:+70000000000" style="color: #2C4A86; font-weight: bold; text-decoration: none;">+7 (000) 000-00-00</a></p>
+        <p>✉️ <a href="mailto:info@arsenal-group.ru" style="color: #2C4A86; font-weight: bold; text-decoration: none;">info@arsenal-group.ru</a></p>
+    </div>
+</section>
 
 <script>
     function openModal() { document.getElementById("galleryModal").style.display = "block"; document.body.style.overflow = "hidden"; }
