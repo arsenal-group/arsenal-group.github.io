@@ -8,12 +8,11 @@
 </head>
 <body>
 
-<header>
-   <div class="brand-container">
-        <!-- Ваш логотип -->
-        <img src="logo.jpg.png" alt="АРСЕНАЛ ГРУПП">
+<header class="main-header">
+   <div class="logo-area">
+        <img src="logo.jpg.png" alt="АРСЕНАЛ ГРУПП" class="site-logo">
    </div>
-    <nav>
+    <nav class="main-nav">
         <a href="#about">О компании</a>
         <a href="#portfolio">Объекты на карте</a>
         <a href="#contacts">Контакты</a>
@@ -42,57 +41,36 @@
 
 <section id="portfolio">
     <h2>ГЕОГРАФИЯ ОБЪЕКТОВ</h2>
-    <p style="margin-bottom: 20px; color: #666;">Нажмите на метку на карте или выберите объект из списка ниже, чтобы увидеть фотоотчет.</p>
+    <p style="margin-bottom: 20px; color: #666;">Нажмите на метку на карте или кнопку ниже, чтобы увидеть фотоотчет.</p>
     
-    <!-- Карта Яндекс -->
     <div class="map-container">
         <iframe src="https://yandex.ru" width="100%" height="500" frameborder="0"></iframe>
     </div>
 
-    <!-- Список объектов с интерактивной кнопкой -->
-    <div class="object-list">
-        <div class="object-item">
-            <div class="object-info">
-                <strong>Щелковское шоссе, д. 91, к. 2</strong>
-                <p>Система: Фасад</p>
-            </div>
-            <button class="btn-photo" onclick="openModal()">📷 СМОТРЕТЬ ФОТО</button>
+    <div class="object-item">
+        <div class="object-info">
+            <strong>Щелковское шоссе, д. 91, к. 2</strong>
+            <p>Система: Фасад</p>
         </div>
+        <button class="btn-photo" onclick="openModal()">📷 СМОТРЕТЬ ФОТО</button>
     </div>
 </section>
 
-<!-- Всплывающее окно (Галерея) -->
+<!-- Галерея (Модальное окно) -->
 <div id="galleryModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <h2 style="color: #2C4A86; margin-bottom: 20px;">Фотоотчет: Щелковское шоссе, д. 91, к. 2</h2>
         <div class="photo-grid">
-            <!-- Здесь ваши 25 фото -->
-            <img src="Фасад%201.jpg" alt="Фасад 1">
-            <img src="Фасад%202.jpg" alt="Фасад 2">
-            <img src="Фасад%203.jpg" alt="Фасад 3">
-            <img src="Фасад%204.jpg" alt="Фасад 4">
-            <img src="Фасад%205.jpg" alt="Фасад 5">
-            <img src="Фасад%206.jpg" alt="Фасад 6">
-            <img src="Фасад%207.jpg" alt="Фасад 7">
-            <img src="Фасад%208.jpg" alt="Фасад 8">
-            <img src="Фасад%209.jpg" alt="Фасад 9">
-            <img src="Фасад%2010.jpg" alt="Фасад 10">
-            <img src="Фасад%2011.jpg" alt="Фасад 11">
-            <img src="Фасад%2012.jpg" alt="Фасад 12">
-            <img src="Фасад%2013.jpg" alt="Фасад 13">
-            <img src="Фасад%2014.jpg" alt="Фасад 14">
-            <img src="Фасад%2015.jpg" alt="Фасад 15">
-            <img src="Фасад%2016.jpg" alt="Фасад 16">
-            <img src="Фасад%2017.jpg" alt="Фасад 17">
-            <img src="Фасад%2018.jpg" alt="Фасад 18">
-            <img src="Фасад%2019.jpg" alt="Фасад 19">
-            <img src="Фасад%2020.jpg" alt="Фасад 20">
-            <img src="Фасад%2021.jpg" alt="Фасад 21">
-            <img src="Фасад%2022.jpg" alt="Фасад 22">
-            <img src="Фасад%2023.jpg" alt="Фасад 23">
-            <img src="Фасад%2024.jpg" alt="Фасад 24">
-            <img src="Фасад%2025.jpg" alt="Фасад 25">
+            <img src="Фасад%201.jpg" alt="1"><img src="Фасад%202.jpg" alt="2"><img src="Фасад%203.jpg" alt="3">
+            <img src="Фасад%204.jpg" alt="4"><img src="Фасад%205.jpg" alt="5"><img src="Фасад%206.jpg" alt="6">
+            <img src="Фасад%207.jpg" alt="7"><img src="Фасад%208.jpg" alt="8"><img src="Фасад%209.jpg" alt="9">
+            <img src="Фасад%2010.jpg" alt="10"><img src="Фасад%2011.jpg" alt="11"><img src="Фасад%2012.jpg" alt="12">
+            <img src="Фасад%2013.jpg" alt="13"><img src="Фасад%2014.jpg" alt="14"><img src="Фасад%2015.jpg" alt="15">
+            <img src="Фасад%2016.jpg" alt="16"><img src="Фасад%2017.jpg" alt="17"><img src="Фасад%2018.jpg" alt="18">
+            <img src="Фасад%2019.jpg" alt="19"><img src="Фасад%2020.jpg" alt="20"><img src="Фасад%2021.jpg" alt="21">
+            <img src="Фасад%2022.jpg" alt="22"><img src="Фасад%2023.jpg" alt="23"><img src="Фасад%2024.jpg" alt="24">
+            <img src="Фасад%2025.jpg" alt="25">
         </div>
     </div>
 </div>
