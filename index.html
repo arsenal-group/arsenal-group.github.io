@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>АРСЕНАЛ ГРУПП — Строительная компания</title>
     <style>
-        /* Встроенные стили */
+        /* Встроенные стили для максимальной надежности */
         body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; scroll-behavior: smooth; color: #333; }
         header { display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 1000; }
         .logo-img { height: 100px; width: auto; display: block; }
@@ -22,7 +22,7 @@
 
         .map-wrapper { margin-top: 30px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         
-        /* Стили для папок (вкладок) */
+        /* СТИЛИ ПАПОК */
         .year-tabs { display: flex; gap: 5px; margin-top: 30px; }
         .tab-btn { 
             background: #f0f0f0; border: 1px solid #eee; border-bottom: none;
@@ -30,25 +30,19 @@
             border-radius: 8px 8px 0 0; transition: 0.3s; color: #555;
         }
         .tab-btn.active { background: #2C4A86; color: #fff; border-color: #2C4A86; }
-        .tab-btn:hover:not(.active) { background: #e8e8e8; }
-
-        .tab-content { display: none; }
+        
+        .tab-content { display: none; padding: 25px; background: #fff; border: 1px solid #eee; border-radius: 0 5px 5px 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .tab-content.active { display: block; }
 
-        .object-card { 
-            background: #fff; padding: 25px; border: 1px solid #eee; 
-            display: flex; justify-content: space-between; align-items: center; 
-            border-radius: 0 5px 5px 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
-            margin-top: -1px; 
-        }
         .btn-gallery { background: #2C4A86; color: #fff; border: none; padding: 15px 30px; border-radius: 4px; cursor: pointer; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
         .btn-gallery:hover { background: #1a252f; }
 
-        /* Модальное окно */
+        /* Стили модального окна */
         .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); overflow-y: auto; }
         .modal-content { background: #fff; margin: 2% auto; padding: 30px; width: 90%; max-width: 1100px; border-radius: 8px; position: relative; }
         .close-btn { position: absolute; right: 20px; top: 10px; font-size: 45px; font-weight: bold; cursor: pointer; color: #333; }
         .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-top: 20px; }
+        .photo-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; border: 1px solid #eee; }
 
         footer { text-align: center; padding: 40px; background: #fff; border-top: 1px solid #eee; color: #888; font-size: 14px; }
     </style>
@@ -81,10 +75,11 @@
 <section id="portfolio" style="background: #f9f9f9;">
     <h2>Объекты на карте</h2>
     <div class="map-wrapper">
+        <!-- ТВОЯ КАРТА БЕЗ ИЗМЕНЕНИЙ -->
         <iframe src="https://yandex.ru" width="100%" height="530" frameborder="0"></iframe>
     </div>
 
-    <!-- ПАПКИ -->
+    <!-- ТРИ ПАПКИ -->
     <div class="year-tabs">
         <div class="tab-btn active" onclick="openYear(event, '2024')">2024 год</div>
         <div class="tab-btn" onclick="openYear(event, '2025')">2025 год</div>
@@ -92,21 +87,15 @@
     </div>
 
     <div id="2024" class="tab-content active">
-        <div class="object-card">
-            <p style="color: #666;">Объекты на 2024 год скоро появятся.</p>
-        </div>
+        <p style="color: #666;">Здесь будет список объектов за 2024 год.</p>
     </div>
 
     <div id="2025" class="tab-content">
-        <div class="object-card">
-            <p style="color: #666;">Объекты на 2025 год в процессе реализации.</p>
-        </div>
+        <p style="color: #666;">Здесь будет список объектов за 2025 год.</p>
     </div>
 
     <div id="2026" class="tab-content">
-        <div class="object-card">
-            <p style="color: #666;">Список объектов на 2026 год формируется.</p>
-        </div>
+        <p style="color: #666;">Здесь будет список объектов за 2026 год.</p>
     </div>
 </section>
 
@@ -140,14 +129,12 @@
         tabcontent = document.getElementsByClassName("tab-content");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
-            tabcontent[i].classList.remove("active");
         }
         tablinks = document.getElementsByClassName("tab-btn");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].classList.remove("active");
         }
         document.getElementById(yearId).style.display = "block";
-        document.getElementById(yearId).classList.add("active");
         evt.currentTarget.classList.add("active");
     }
 </script>
