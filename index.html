@@ -22,26 +22,7 @@
 
         .map-wrapper { margin-top: 30px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         
-        /* СТИЛИ ПАПОК (ВКЛАДОК) */
-        .year-tabs { display: flex; gap: 5px; margin-top: 30px; }
-        .tab-btn { 
-            background: #f0f0f0; border: 1px solid #eee; border-bottom: none;
-            padding: 12px 25px; cursor: pointer; font-weight: bold; 
-            border-radius: 8px 8px 0 0; transition: 0.3s; color: #555;
-        }
-        .tab-btn.active { background: #2C4A86; color: #fff; border-color: #2C4A86; }
-        .tab-btn:hover:not(.active) { background: #e8e8e8; }
-
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-
-        .object-card { 
-            background: #fff; padding: 25px; border: 1px solid #eee; 
-            display: flex; justify-content: space-between; align-items: center; 
-            border-radius: 0 5px 5px 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
-            margin-top: -1px; /* Привязка к папке */
-        }
-        
+        .object-card { margin-top: 30px; background: #fff; padding: 25px; border: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .btn-gallery { background: #2C4A86; color: #fff; border: none; padding: 15px 30px; border-radius: 4px; cursor: pointer; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
         .btn-gallery:hover { background: #1a252f; }
 
@@ -78,48 +59,26 @@
             <li><b>✔</b> <span><strong>Надежность:</strong> строгое соблюдение СНиП, ГОСТ и договорных сроков.</span></li>
         </ul>
     </div>
+    <p style="font-size: 18px; line-height: 1.8;">Мы берем на себя ответственность за техническую сторону вопроса, чтобы вы могли быть уверены в безопасности и долговечности своего объекта.</p>
 </section>
 
 <section id="portfolio" style="background: #f9f9f9;">
     <h2>Объекты на карте</h2>
     <div class="map-wrapper">
+        <!-- Ваша интерактивная карта -->
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A32168470ee63bc59dcca8aeaa064c602f8856ce090092eb250b889e597dc726a&amp;source=constructor" width="100%" height="530" frameborder="0"></iframe>
     </div>
 
-    <!-- БЛОК ПАПОК -->
-    <div class="year-tabs">
-        <div class="tab-btn active" onclick="switchYear(event, 'y2024')">2024 год</div>
-        <div class="tab-btn" onclick="switchYear(event, 'y2025')">2025 год</div>
-        <div class="tab-btn" onclick="switchYear(event, 'y2026')">2026 год</div>
-    </div>
-
-    <!-- СОДЕРЖИМОЕ ПАПКИ 2024 -->
-    <div id="y2024" class="tab-content active">
-        <div class="object-card">
-            <div>
-                <strong style="font-size: 22px; color: #2C4A86;">Щелковское шоссе, д. 91, к. 2</strong>
-                <p style="margin: 5px 0 0 0; color: #666; font-size: 16px;">Выполненные строительно-монтажные работы (Фасад)</p>
-            </div>
-            <button class="btn-gallery" onclick="openModal()">📷 Смотреть фото</button>
+    <div id="details" class="object-card">
+        <div>
+            <strong style="font-size: 22px; color: #2C4A86;">Щелковское шоссе, д. 91, к. 2</strong>
+            <p style="margin: 5px 0 0 0; color: #666; font-size: 16px;">Выполненные строительно-монтажные работы (Фасад)</p>
         </div>
-    </div>
-
-    <!-- СОДЕРЖИМОЕ ПАПКИ 2025 -->
-    <div id="y2025" class="tab-content">
-        <div class="object-card">
-            <p style="color: #666;">Объекты на 2025 год находятся в процессе реализации.</p>
-        </div>
-    </div>
-
-    <!-- СОДЕРЖИМОЕ ПАПКИ 2026 -->
-    <div id="y2026" class="tab-content">
-        <div class="object-card">
-            <p style="color: #666;">Список объектов на 2026 год формируется.</p>
-        </div>
+        <button class="btn-gallery" onclick="openModal()">📷 Смотреть фото</button>
     </div>
 </section>
 
-<!-- Модальное окно -->
+<!-- Модальное окно с 25 фото -->
 <div id="photoModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -133,41 +92,24 @@
         </div>
     </div>
 </div>
-
 <section id="contacts" style="padding: 60px 10%; background: #fff;">
     <h2 style="color: #2C4A86; border-bottom: 2px solid #2C4A86; display: inline-block; padding-bottom: 5px; font-size: 24px;">КОНТАКТЫ</h2>
+    
     <div style="margin-top: 30px; font-size: 16px; line-height: 1.8; color: #333;">
         <p style="font-size: 18px; font-weight: bold; color: #2C4A86; margin-bottom: 15px;">ООО «АРСЕНАЛ ГРУПП»</p>
-        <p>📍 <strong>Адрес:</strong> 115088, г. Москва, ул. Шарикоподшипниковская, д. 4, к. 4А</p>
+        
+        <p>📍 <strong>Юридический адрес:</strong> 115088, г. Москва, ул. Шарикоподшипниковская, д. 4, к. 4А, пом. 5/1</p>
+        
         <p>📞 <strong>Телефон:</strong> 8 495 100 100 10</p>
-        <p>📧 <strong>E-mail:</strong> arsenalgroup2020@bk.ru</p>
+        
+        <p>📧 <strong>E-mail:</strong> <span style="color: #2C4A86; font-weight: bold;">arsenalgroup2020@bk.ru</span></p>
     </div>
 </section>
-
-<footer>&copy; 2026 ООО «АРСЕНАЛ ГРУПП»</footer>
-
+</section>
 <script>
-    // Оригинальные функции модального окна
     function openModal() { document.getElementById("photoModal").style.display = "block"; document.body.style.overflow = "hidden"; }
     function closeModal() { document.getElementById("photoModal").style.display = "none"; document.body.style.overflow = "auto"; }
     window.onclick = function(event) { if (event.target == document.getElementById("photoModal")) closeModal(); }
-
-    // Функция переключения вкладок (папок)
-    function switchYear(evt, yearId) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-            tabcontent[i].classList.remove("active");
-        }
-        tablinks = document.getElementsByClassName("tab-btn");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].classList.remove("active");
-        }
-        document.getElementById(yearId).style.display = "block";
-        document.getElementById(yearId).classList.add("active");
-        evt.currentTarget.classList.add("active");
-    }
 </script>
 
 </body>
