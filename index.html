@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>АРСЕНАЛ ГРУПП — Строительная компания</title>
     <style>
+        /* Встроенные стили для максимальной надежности */
         body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; scroll-behavior: smooth; color: #333; }
         header { display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 1000; }
         .logo-img { height: 100px; width: auto; display: block; }
@@ -19,19 +20,17 @@
         .principles-box li { margin-bottom: 12px; display: flex; align-items: center; font-size: 17px; }
         .principles-box b { color: #2C4A86; margin-right: 10px; }
 
-        /* Контейнер карты */
         .map-wrapper { margin-top: 30px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         
-        /* СТИЛИ ПАПОК */
+        /* СТИЛИ ПАПОК (ВКЛАДОК) */
         .year-tabs { display: flex; gap: 5px; margin-top: 30px; }
         .tab-btn { 
-            background: #f0f0f0; border: 1px solid #eee; border-bottom: none;
-            padding: 12px 25px; cursor: pointer; font-weight: bold; 
-            border-radius: 8px 8px 0 0; transition: 0.3s; color: #555;
+            background: #f0f0f0; border: 1px solid #ddd; border-bottom: none;
+            padding: 10px 20px; cursor: pointer; font-weight: bold; 
+            border-radius: 6px 6px 0 0; transition: 0.3s; color: #555; font-size: 14px;
         }
         .tab-btn.active { background: #2C4A86; color: #fff; border-color: #2C4A86; }
 
-        /* КОНТЕНТ ПАПОК */
         .tab-content { display: none; }
         .tab-content.active { display: block; }
 
@@ -39,16 +38,17 @@
             background: #fff; padding: 25px; border: 1px solid #eee; 
             display: flex; justify-content: space-between; align-items: center; 
             border-radius: 0 5px 5px 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
-            margin-top: -1px; /* Стык с папкой */
+            margin-top: -1px; /* Стык с кнопкой */
         }
         .btn-gallery { background: #2C4A86; color: #fff; border: none; padding: 15px 30px; border-radius: 4px; cursor: pointer; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
         .btn-gallery:hover { background: #1a252f; }
 
-        /* Модальное окно */
+        /* Стили модального окна */
         .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); overflow-y: auto; }
         .modal-content { background: #fff; margin: 2% auto; padding: 30px; width: 90%; max-width: 1100px; border-radius: 8px; position: relative; }
         .close-btn { position: absolute; right: 20px; top: 10px; font-size: 45px; font-weight: bold; cursor: pointer; color: #333; }
         .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-top: 20px; }
+        .photo-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; border: 1px solid #eee; }
 
         footer { text-align: center; padding: 40px; background: #fff; border-top: 1px solid #eee; color: #888; font-size: 14px; }
     </style>
@@ -66,11 +66,14 @@
 
 <section id="about">
     <h1>О компании</h1>
-    <p style="font-size: 18px; line-height: 1.8;"><strong>«Арсенал Групп»</strong> — профессиональная строительная организация.</p>
+    <p style="font-size: 18px; line-height: 1.8;">
+        <strong>«Арсенал Групп»</strong> — профессиональная строительная организация, ориентированная на результат.
+    </p>
     <div class="principles-box">
         <ul>
-            <li><b>✔</b> <span><strong>Надежность:</strong> строгое соблюдение СНиП и ГОСТ.</span></li>
-            <li><b>✔</b> <span><strong>Качество:</strong> сертифицированные материалы.</span></li>
+            <li><b>✔</b> <span><strong>Прозрачность:</strong> мы предоставляем полную информацию о ходе работ.</span></li>
+            <li><b>✔</b> <span><strong>Качество:</strong> используем только сертифицированные материалы.</span></li>
+            <li><b>✔</b> <span><strong>Надежность:</strong> строгое соблюдение СНиП, ГОСТ и договорных сроков.</span></li>
         </ul>
     </div>
 </section>
@@ -78,64 +81,73 @@
 <section id="portfolio" style="background: #f9f9f9;">
     <h2>Объекты на карте</h2>
     <div class="map-wrapper">
-        <!-- КАРТА СТАБИЛЬНО ЗДЕСЬ -->
+        <!-- Твоя карта (ровно как в оригинале) -->
         <iframe src="https://yandex.ru" width="100%" height="530" frameborder="0"></iframe>
     </div>
 
-    <!-- ТРИ ПАПКИ ПОД КАРТОЙ -->
+    <!-- ТРИ ПАПКИ -->
     <div class="year-tabs">
-        <div class="tab-btn active" onclick="openYear(event, 'y2024')">2024 год</div>
-        <div class="tab-btn" onclick="openYear(event, 'y2025')">2025 год</div>
-        <div class="tab-btn" onclick="openYear(event, 'y2026')">2026 год</div>
+        <button class="tab-btn active" onclick="openYear(event, 'y2024')">2024 год</button>
+        <button class="tab-btn" onclick="openYear(event, 'y2025')">2025 год</button>
+        <button class="tab-btn" onclick="openYear(event, 'y2026')">2026 год</button>
     </div>
 
+    <!-- КОНТЕНТ 2024 (Твоя карточка здесь) -->
     <div id="y2024" class="tab-content active">
         <div class="object-card">
             <div>
                 <strong style="font-size: 22px; color: #2C4A86;">Щелковское шоссе, д. 91, к. 2</strong>
-                <p style="margin: 5px 0 0 0; color: #666;">Выполненные строительно-монтажные работы (Фасад)</p>
+                <p style="margin: 5px 0 0 0; color: #666; font-size: 16px;">Выполненные строительно-монтажные работы (Фасад)</p>
             </div>
             <button class="btn-gallery" onclick="openModal()">📷 Смотреть фото</button>
         </div>
     </div>
 
+    <!-- КОНТЕНТ 2025 -->
     <div id="y2025" class="tab-content">
-        <div class="object-card"><p>Объекты на 2025 год в работе.</p></div>
+        <div class="object-card"><p>Объекты на 2025 год скоро появятся.</p></div>
     </div>
 
+    <!-- КОНТЕНТ 2026 -->
     <div id="y2026" class="tab-content">
-        <div class="object-card"><p>Объекты на 2026 год планируются.</p></div>
+        <div class="object-card"><p>Список объектов на 2026 год формируется.</p></div>
     </div>
 </section>
 
 <div id="photoModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2 style="text-align: center; color: #2C4A86;">Фотоотчет объекта</h2>
+        <h2 style="text-align: center; color: #2C4A86; text-transform: uppercase;">Фотоотчет объекта</h2>
         <div class="photo-grid"></div>
     </div>
 </div>
 
-<section id="contacts">
+<section id="contacts" style="padding: 60px 10%; background: #fff;">
     <h2>КОНТАКТЫ</h2>
-    <p>📍 г. Москва, ул. Шарикоподшипниковская, д. 4, к. 4А</p>
-    <p>📧 arsenalgroup2020@bk.ru | 📞 8 495 100 100 10</p>
+    <div style="margin-top: 30px; line-height: 1.8;">
+        <p>📍 <strong>Адрес:</strong> г. Москва, ул. Шарикоподшипниковская, д. 4, к. 4А</p>
+        <p>📞 <strong>Телефон:</strong> 8 495 100 100 10</p>
+        <p>📧 <strong>E-mail:</strong> arsenalgroup2020@bk.ru</p>
+    </div>
 </section>
 
 <footer>&copy; 2026 ООО «АРСЕНАЛ ГРУПП»</footer>
 
 <script>
+    // Твои оригинальные функции
     function openModal() { document.getElementById("photoModal").style.display = "block"; document.body.style.overflow = "hidden"; }
     function closeModal() { document.getElementById("photoModal").style.display = "none"; document.body.style.overflow = "auto"; }
-    
+    window.onclick = function(event) { if (event.target == document.getElementById("photoModal")) closeModal(); }
+
+    // Чистая логика переключения
     function openYear(evt, yearId) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
-        tablinks = document.getElementsByClassName("tab-btn");
-        for (i = 0; i < tablinks.length; i++) { tablinks[i].classList.remove("active"); }
+        var i, content, buttons;
+        content = document.getElementsByClassName("tab-content");
+        for (i = 0; i < content.length; i++) { content[i].style.display = "none"; }
+        buttons = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < buttons.length; i++) { buttons[i].className = buttons[i].className.replace(" active", ""); }
         document.getElementById(yearId).style.display = "block";
-        evt.currentTarget.classList.add("active");
+        evt.currentTarget.className += " active";
     }
 </script>
 </body>
