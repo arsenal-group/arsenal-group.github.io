@@ -30,6 +30,7 @@
             border-radius: 8px 8px 0 0; transition: 0.3s; color: #555;
         }
         .tab-btn.active { background: #2C4A86; color: #fff; border-color: #2C4A86; }
+        .tab-btn:hover:not(.active) { background: #e8e8e8; }
 
         .tab-content { display: none; }
         .tab-content.active { display: block; }
@@ -92,23 +93,19 @@
 
     <div id="2024" class="tab-content active">
         <div class="object-card">
-            <div>
-                <strong style="font-size: 22px; color: #2C4A86;">Щелковское шоссе, д. 91, к. 2</strong>
-                <p style="margin: 5px 0 0 0; color: #666; font-size: 16px;">Выполненные строительно-монтажные работы (Фасад)</p>
-            </div>
-            <button class="btn-gallery" onclick="openModal()">📷 Смотреть фото</button>
+            <p style="color: #666;">Объекты на 2024 год скоро появятся.</p>
         </div>
     </div>
 
     <div id="2025" class="tab-content">
         <div class="object-card">
-            <p>Объекты на 2025 год появятся позже.</p>
+            <p style="color: #666;">Объекты на 2025 год в процессе реализации.</p>
         </div>
     </div>
 
     <div id="2026" class="tab-content">
         <div class="object-card">
-            <p>Объекты на 2026 год появятся позже.</p>
+            <p style="color: #666;">Список объектов на 2026 год формируется.</p>
         </div>
     </div>
 </section>
@@ -117,9 +114,7 @@
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <h2 style="text-align: center; color: #2C4A86; text-transform: uppercase;">Фотоотчет объекта</h2>
-        <div class="photo-grid">
-            <!-- Место для будущих фото -->
-        </div>
+        <div class="photo-grid"></div>
     </div>
 </div>
 
