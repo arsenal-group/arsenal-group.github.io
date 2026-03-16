@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>АРСЕНАЛ ГРУПП — Строительная компания</title>
     <style>
-        /* Встроенные стили для максимальной надежности */
+        /* Твои оригинальные стили */
         body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; scroll-behavior: smooth; color: #333; }
         header { display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 1000; }
         .logo-img { height: 100px; width: auto; display: block; }
@@ -22,7 +22,7 @@
 
         .map-wrapper { margin-top: 30px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         
-        /* СТИЛИ ПАПОК */
+        /* НОВЫЕ СТИЛИ ДЛЯ ПАПОК (ВКЛАДОК) */
         .year-tabs { display: flex; gap: 5px; margin-top: 30px; }
         .tab-btn { 
             background: #f0f0f0; border: 1px solid #eee; border-bottom: none;
@@ -30,10 +30,16 @@
             border-radius: 8px 8px 0 0; transition: 0.3s; color: #555;
         }
         .tab-btn.active { background: #2C4A86; color: #fff; border-color: #2C4A86; }
-        
-        .tab-content { display: none; padding: 25px; background: #fff; border: 1px solid #eee; border-radius: 0 5px 5px 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+
+        .tab-content { display: none; }
         .tab-content.active { display: block; }
 
+        .object-card { 
+            background: #fff; padding: 25px; border: 1px solid #eee; 
+            display: flex; justify-content: space-between; align-items: center; 
+            border-radius: 0 5px 5px 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            margin-top: -1px; 
+        }
         .btn-gallery { background: #2C4A86; color: #fff; border: none; padding: 15px 30px; border-radius: 4px; cursor: pointer; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
         .btn-gallery:hover { background: #1a252f; }
 
@@ -42,7 +48,6 @@
         .modal-content { background: #fff; margin: 2% auto; padding: 30px; width: 90%; max-width: 1100px; border-radius: 8px; position: relative; }
         .close-btn { position: absolute; right: 20px; top: 10px; font-size: 45px; font-weight: bold; cursor: pointer; color: #333; }
         .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-top: 20px; }
-        .photo-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; border: 1px solid #eee; }
 
         footer { text-align: center; padding: 40px; background: #fff; border-top: 1px solid #eee; color: #888; font-size: 14px; }
     </style>
@@ -70,12 +75,13 @@
             <li><b>✔</b> <span><strong>Надежность:</strong> строгое соблюдение СНиП, ГОСТ и договорных сроков.</span></li>
         </ul>
     </div>
+    <p style="font-size: 18px; line-height: 1.8;">Мы берем на себя ответственность за техническую сторону вопроса, чтобы вы могли быть уверены в безопасности и долговечности своего объекта.</p>
 </section>
 
 <section id="portfolio" style="background: #f9f9f9;">
     <h2>Объекты на карте</h2>
     <div class="map-wrapper">
-        <!-- ТВОЯ КАРТА БЕЗ ИЗМЕНЕНИЙ -->
+        <!-- Карта из твоего рабочего кода -->
         <iframe src="https://yandex.ru" width="100%" height="530" frameborder="0"></iframe>
     </div>
 
@@ -86,16 +92,23 @@
         <div class="tab-btn" onclick="openYear(event, '2026')">2026 год</div>
     </div>
 
+    <!-- КОНТЕНТ ПАПОК -->
     <div id="2024" class="tab-content active">
-        <p style="color: #666;">Здесь будет список объектов за 2024 год.</p>
+        <div class="object-card">
+            <p style="color: #666;">Объекты за 2024 год.</p>
+        </div>
     </div>
 
     <div id="2025" class="tab-content">
-        <p style="color: #666;">Здесь будет список объектов за 2025 год.</p>
+        <div class="object-card">
+            <p style="color: #666;">Объекты за 2025 год.</p>
+        </div>
     </div>
 
     <div id="2026" class="tab-content">
-        <p style="color: #666;">Здесь будет список объектов за 2026 год.</p>
+        <div class="object-card">
+            <p style="color: #666;">Объекты за 2026 год.</p>
+        </div>
     </div>
 </section>
 
@@ -103,7 +116,9 @@
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <h2 style="text-align: center; color: #2C4A86; text-transform: uppercase;">Фотоотчет объекта</h2>
-        <div class="photo-grid"></div>
+        <div class="photo-grid">
+            <!-- Здесь будут фото -->
+        </div>
     </div>
 </div>
 
@@ -120,22 +135,20 @@
 <footer>&copy; 2026 ООО «АРСЕНАЛ ГРУПП»</footer>
 
 <script>
+    // Твои функции
     function openModal() { document.getElementById("photoModal").style.display = "block"; document.body.style.overflow = "hidden"; }
     function closeModal() { document.getElementById("photoModal").style.display = "none"; document.body.style.overflow = "auto"; }
     window.onclick = function(event) { if (event.target == document.getElementById("photoModal")) closeModal(); }
 
+    // Функция переключения лет
     function openYear(evt, yearId) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
+        for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
         tablinks = document.getElementsByClassName("tab-btn");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].classList.remove("active");
-        }
+        for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
         document.getElementById(yearId).style.display = "block";
-        evt.currentTarget.classList.add("active");
+        evt.currentTarget.className += " active";
     }
 </script>
 
